@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-class EditProfilePage extends StatefulWidget {
-  const EditProfilePage({super.key});
+class EditProfileFarmerPage extends StatefulWidget {
+  const EditProfileFarmerPage({super.key});
 
   @override
-  State<EditProfilePage> createState() => _EditProfilePageState();
+  State<EditProfileFarmerPage> createState() => _EditProfilePageState();
 }
 
-class _EditProfilePageState extends State<EditProfilePage> {
+class _EditProfilePageState extends State<EditProfileFarmerPage> {
   final _formKey = GlobalKey<FormState>();
-  final TextEditingController nameController = TextEditingController(text: "Manar Yasser");
-  final TextEditingController emailController = TextEditingController(text: "manary960@gmail.com");
+  final TextEditingController nameController = TextEditingController(text: "farmer");
+  final TextEditingController emailController = TextEditingController(text: "farmer120@gmail.com");
   final TextEditingController phoneController = TextEditingController(text: "01012345678");
   final TextEditingController addressController = TextEditingController(text: "Nasr City, Cairo");
 

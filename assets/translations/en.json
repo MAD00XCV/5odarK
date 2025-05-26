@@ -80,7 +80,28 @@
   "passwords_do_not_match": "Passwords do not match",
   "register_success": "Account created successfully!",
   "register_failed": "Registration failed. Please try again.",
-  "error_occurred": "An error occurred. Please try again."
+  "error_occurred": "An error occurred. Please try again.",
+    "Farmer_J": {
+  "add_product": "Add Product",
+  "product_name": "Product Name",
+  "product_description": "Description",
+  "product_address": "Address",
+  "product_price": "Price",
+  "product_unit": "Unit",
+  "choose_image": "Choose Image",
+  "submit": "Submit",
+  "required_field": "This field is required",
+  "product_added_success": "Product added successfully!",
+  "my_products": "My Products",
+  "no_products": "You haven't added any products yet.",
+  "edit": "Edit",
+  "delete": "Delete",
+  "product_details": "Product Details"
+
+
+
+}
+
 
 
 

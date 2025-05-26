@@ -1,3 +1,5 @@
+import 'package:app/Farmer/farmer_main_page.dart';
+import 'package:app/Farmer/product/add_product_page.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:app/login_register/register_page.dart';
@@ -20,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
   void _login() {
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const HomePage()),
+      MaterialPageRoute(builder: (context) => const FarmerMainPage()),
     );
   }
 
@@ -88,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(height: 16),
 
-                TextField(
+TextField(
                   controller: _passwordController,
                   obscureText: _obscurePassword,
                   decoration: InputDecoration(

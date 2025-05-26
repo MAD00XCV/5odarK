@@ -78,7 +78,29 @@
   "passwords_do_not_match": "كلمتا المرور غير متطابقتين",
   "register_success": "تم إنشاء الحساب بنجاح!",
   "register_failed": "فشل في إنشاء الحساب. حاول مرة أخرى.",
-  "error_occurred": "حدث خطأ. حاول مرة أخرى."
+  "error_occurred": "حدث خطأ. حاول مرة أخرى.",
+     "Farmer_J": {
+  "add_product": "إضافة منتج",
+  "product_name": "اسم المنتج",
+  "product_description": "الوصف",
+  "product_address": "العنوان",
+  "product_price": "السعر",
+  "product_unit": "الوحدة",
+  "choose_image": "اختر صورة",
+  "submit": "إرسال",
+  "required_field": "هذا الحقل مطلوب",
+  "product_added_success": "تمت إضافة المنتج بنجاح!",
+  "my_products": "منتجاتي",
+  "no_products": "لم تقم بإضافة أي منتجات بعد.",
+  "edit": "تعديل",
+  "delete": "حذف",
+  "product_details": "تفاصيل المنتج"
+
+
+
+}
+
+
 }
 
 
