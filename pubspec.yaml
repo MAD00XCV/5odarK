@@ -1,0 +1,61 @@
+name: app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  easy_localization: ^3.0.3
+  cupertino_icons: ^1.0.8
+  url_launcher: ^6.2.5
+  google_fonts: ^6.2.1
+  flutter_iconly: ^1.0.2
+  badges: ^3.1.2
+  dio: ^5.4.0
+  image_picker: ^1.0.4 
+  google_maps_flutter: ^2.5.0
+  geolocator: ^10.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/con1.png
+    - assets/images/straw.jpg
+    - assets/images/potato.jpg
+    - assets/images/orange.jpg
+    - assets/images/Watermelon.jpg
+    - assets/images/grappe.jpg
+    - assets/images/lemon.jpg
+    - assets/images/carrot.jpg
+    - assets/images/tomato.jpg
+    - assets/images/connnn.png
+    - assets/images/women.png
+    - assets/images/farmland.jpg
+    - assets/images/basket.jpg
+    - assets/images/tablet.jpg
+    - assets/images/9008.jpg
+    - assets/images/79998.jpg
+    - assets/images/ok.jpg
+    - assets/images/5ad.jpg
+    - assets/images/fruits.jpg
+    - assets/images/vegetables.jpg
+    - assets/images/milk&eeg.jpg
+    - assets/images/beverages.jpg
+    - assets/images/onion.png
+    - assets/translations/ar.json
+    - assets/translations/en.json
+    

@@ -1,0 +1,120 @@
+{
+  "welcome": "مرحبًا بك في خضرك",
+  "subtitle": "احصل على منتجاتك الزراعية من راحة منزلك.\nأنت على بعد خطوة من منتجاتك المفضلة.",
+  "continue": "استمرار",
+  "change_language": "تغيير اللغة  ",
+  "login": "تسجيل الدخول",
+  "register": "إنشاء حساب",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "confirm_password": "تأكيد كلمة المرور",
+  "create_account": "إنشاء حساب",
+  "already_have_account": " لديك حساب بالفعل؟ تسجيل الدخول الأن ",
+  "already_account": "ليس لديك حساب ؟ أنشاء حساب الأن",
+  "full_name": "الاسم الكامل",
+  "mobile_optional": "رقم الهاتف (اختياري)",
+  "address_optional": "العنوان (اختياري)",
+  "select_role": "اختر الدور",
+  "Client": "عميل",
+  "Farmer": "مزارع",
+  "home": "الرئيسية",
+  "favourites": "المفضلة",
+  "cart": "السلة",
+  "profile": "الملف الشخصي",
+  "search_hint": "ابحث هنا...",
+  "free_consultation": "استشارة مجانية",
+  "free_support_desc": "احصل على دعم مجاني من خدمة العملاء",
+  "call_now": "اتصل الآن",
+  "contact_us": "اتصل بنا",
+  "call_prompt": "هل ترغب في إجراء مكالمة؟",
+  "no": "لا",
+  "call": "اتصال",
+  "cannot_make_call": "لا يمكن إجراء المكالمة",
+  "featured_products": "منتجات مميزة",
+  "see_all": "عرض الكل",
+  "fruits": "فواكه",
+  "vegetables": "خضروات",
+  "dairy": "منتجات ألبان",
+  "fresh": "طازج",
+  "edit_profile": "تعديل الملف الشخصي",
+  "save": "حفظ",
+  "profile_updated": "تم تحديث الملف الشخصي بنجاح",
+  "required_field": "هذا الحقل مطلوب",
+  "about_privacy_title": "عن التطبيق وسياسة الخصوصية",
+  "about_privacy_content": "نحن في خضرك نسعى لتقديم أفضل الفواكه والخضروات الطازجة مباشرةً إلى باب منزلك، مع مراعاة خصوصيتك وأمان معلوماتك في جميع الأوقات.",
+  "ok": "حسناً",
+    "Home_Delivery": "توصيل للمنزل",
+  "pickup": "استلام من الفرع",
+    "myOrders": {
+  "title": "طلباتي",
+  "detailsTitle": "تفاصيل الطلب",
+  "orderDate": "تاريخ الطلب",
+  "orderNumber": "رقم الطلب",
+  "totalPrice": "السعر الإجمالي",
+  "deliveryMethod": "طريقة التوصيل",
+  "status": "الحالة",
+  "viewProduct": "عرض المنتج",
+  "quantity": "الكمية",
+  "unitPrice": "سعر الوحدة",
+  "productTotal": "الإجمالي",
+  "totalItemPrice": "السعر الإجمالي للمنتج"
+
+
+},
+
+  "orderStatus": {
+    "delivered": "تم التوصيل",
+    "inDelivery": "قيد التوصيل",
+    "canceled": "ملغى"
+  },
+  "Start_Shopping": "ابدأ التسوق",
+  "cart_empty": "سلة التسوق فارغة!",
+  "Proceed_Checkout": "إتمام عملية الشراء",
+  "cart_total": "الإجمالي",
+    "logout": "تسجيل الخروج",
+  "logout_confirm": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+  "yes": "نعم",
+  "required": "هذا الحقل مطلوب",
+  "passwords_do_not_match": "كلمتا المرور غير متطابقتين",
+  "register_success": "تم إنشاء الحساب بنجاح!",
+  "register_failed": "فشل في إنشاء الحساب. حاول مرة أخرى.",
+  "error_occurred": "حدث خطأ. حاول مرة أخرى.",
+     "Farmer_J": {
+  "add_product": "إضافة منتج",
+  "product_name": "اسم المنتج",
+  "product_description": "الوصف",
+  "product_address": "العنوان",
+  "product_price": "السعر",
+  "product_unit": "الوحدة",
+  "choose_image": "اختر صورة",
+  "submit": "إرسال",
+  "required_field": "هذا الحقل مطلوب",
+  "product_added_success": "تمت إضافة المنتج بنجاح!",
+  "my_products": "منتجاتي",
+  "no_products": "لم تقم بإضافة أي منتجات بعد.",
+  "edit": "تعديل",
+  "delete": "حذف",
+  "product_details": "تفاصيل المنتج"
+
+},
+  "farmerHome": {
+    "statisticsTitle": "إحصائياتك",
+    "remainingProducts": "المنتجات المتبقية",
+    "receivedOrders": "الطلبات المستلمة",
+    "customersOrdered": "العملاء الذين طلبوا"
+  },
+  
+  "farmer_home": "الصفحة الرئيسية للمزارع",
+  "remaining_products": "المنتجات المتبقية",
+  "orders_received": "الطلبات المستلمة",
+  "buyers": "العملاء"
+
+
+
+
+}
+
+
+
+ 
+
