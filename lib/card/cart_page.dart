@@ -1,3 +1,5 @@
+import 'package:app/card/Location.dart';
+import 'package:app/card/card_checkout_page.dart';
 import 'package:app/home/home_page.dart';
 import 'package:app/product/product_details_page.dart';
 import 'package:app/product/products.dart';
@@ -80,12 +82,14 @@ class _CartPageState extends State<CartPage> {
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => const HomePage()),
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()),
                       );
                     },
                     style: FilledButton.styleFrom(
                       backgroundColor: primaryGreen,
-                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 24, vertical: 12),
                     ),
                     child: Text('Start_Shopping'.tr()),
                   ),
@@ -125,18 +129,16 @@ class _CartPageState extends State<CartPage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => ProductDetailsPage(product: product),
+                                  builder: (context) =>
+                                      ProductDetailsPage(product: product),
                                 ),
                               );
                             },
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(12),
-                              child: Image.asset(
-                                product.image,
-                                width: 70,
-                                height: 70,
-                                fit: BoxFit.cover,
-                              ),
+                            child: Image.asset(
+                              product.image,
+                              width: 70,
+                              height: 70,
+                              fit: BoxFit.cover,
                             ),
                           ),
                         ),
@@ -146,7 +148,8 @@ class _CartPageState extends State<CartPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     product.name,
@@ -158,7 +161,8 @@ class _CartPageState extends State<CartPage> {
                                   ),
                                   IconButton(
                                     onPressed: () => removeItem(index),
-                                    icon: const Icon(Icons.delete_outline, color: Colors.red),
+                                    icon: const Icon(Icons.delete_outline,
+                                        color: Colors.red),
                                   )
                                 ],
                               ),
@@ -180,11 +184,13 @@ class _CartPageState extends State<CartPage> {
                                       padding: EdgeInsets.zero,
                                       iconSize: 18,
                                       onPressed: () => decreaseQuantity(index),
-                                      icon: const Icon(Icons.remove_circle_outline),
+                                      icon: const Icon(
+                                          Icons.remove_circle_outline),
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8),
                                     child: Text(
                                       "$quantity",
                                       style: const TextStyle(
@@ -199,7 +205,8 @@ class _CartPageState extends State<CartPage> {
                                       padding: EdgeInsets.zero,
                                       iconSize: 18,
                                       onPressed: () => increaseQuantity(index),
-                                      icon: const Icon(Icons.add_circle_outline),
+                                      icon:
+                                          const Icon(Icons.add_circle_outline),
                                     ),
                                   ),
                                 ],
@@ -220,10 +227,7 @@ class _CartPageState extends State<CartPage> {
                     ),
                   );
                 }),
-
                 const SizedBox(height: 20),
-
-                // Total row
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -244,9 +248,7 @@ class _CartPageState extends State<CartPage> {
                     ),
                   ],
                 ),
-
                 const SizedBox(height: 25),
-
                 FilledButton.icon(
                   style: FilledButton.styleFrom(
                     backgroundColor: primaryGreen,
@@ -256,7 +258,15 @@ class _CartPageState extends State<CartPage> {
                     ),
                   ),
                   onPressed: () {
-                    // Checkout logic
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LocationPickerPage(
+                          totalAmount: totalPrice,
+                          cartItems: cartItems,
+                        ),
+                      ),
+                    );
                   },
                   icon: const Icon(IconlyBold.arrowRight),
                   label: Text(

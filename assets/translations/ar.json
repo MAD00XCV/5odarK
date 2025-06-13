@@ -23,7 +23,7 @@
   "profile": "الملف الشخصي",
   "search_hint": "ابحث هنا...",
   "free_consultation": "استشارة مجانية",
-  "free_support_desc": "احصل على دعم مجاني من خدمة العملاء",
+  "free_support_desc": "فريقنا من الخبراء متاح لمساعدتك في أي وقت.\nاحصل على دعم مجاني من خدمة العملاء",
   "call_now": "اتصل الآن",
   "contact_us": "اتصل بنا",
   "call_prompt": "هل ترغب في إجراء مكالمة؟",
@@ -94,14 +94,73 @@
   "no_products": "لم تقم بإضافة أي منتجات بعد.",
   "edit": "تعديل",
   "delete": "حذف",
-  "product_details": "تفاصيل المنتج"
+  "product_details": "تفاصيل المنتج",
+  "save": "حفظ",
+  "edit_product": "تعديل المنتج ",
+  "product_updated_success":"تم حفظ المنتج بنجاح"
 
-
-
+},
+  "farmerHome": {
+    "statisticsTitle": "إحصائياتك",
+    "remainingProducts": "المنتجات المتبقية",
+    "receivedOrders": "الطلبات المستلمة",
+    "customersOrdered": "العملاء الذين طلبوا"
+  },
+  
+  "farmer_home": "الصفحة الرئيسية للمزارع",
+  "remaining_products": "المنتجات المتبقية",
+  "orders_received": "الطلبات المستلمة",
+  "buyers": "العملاء",
+  "returned_items": "المرتجعات",
+  "name": "الاسم",
+  "qty": "الكمية",
+  "id": "معرف المنتج",
+  "orderId": "رقم الطلب",
+  "product": "المنتج",
+  "buyerId": "معرف المشتري",
+  "orders": "الطلبات",
+  "reason": "سبب الإرجاع",
+  "close": "إغلاق",
+    "checkout_title": "إتمام الشراء",
+  "select_address": "اختر موقع التوصيل",
+  "confirm_address": "تأكيد العنوان",
+  "select_payment_method": "اختر وسيلة الدفع",
+  "cash": "نقداً",
+  "credit_card": "بطاقة ائتمان",
+  "card_number": "رقم البطاقة",
+  "expiry_date": "تاريخ الانتهاء",
+  "cvv": "الرمز السري",
+  "confirm_payment": "تأكيد الدفع",
+  "order_placed": "تم تقديم طلبك بنجاح!",
+  
+  "location_page_title": "تحديد العنوان",
+  "enter_manual_address": "إدخال العنوان يدويًا",
+  "address": "العنوان",
+  "enter_phone": "أدخل رقم الهاتف",
+  "next": "التالي",
+  "fill_required_fields": "يرجى ملء جميع الحقول المطلوبة",
+    "checkout": "الدفع",
+  "phone": "رقم الهاتف",
+  "total": "الإجمالي",
+  "payment_method": "طريقة الدفع",
+  "cash_on_delivery": "الدفع عند الاستلام",
+  "pay_now": "ادفع الآن",
+  "place_order": "إرسال الطلب",
+  "processing_payment": "جاري معالجة الدفع...",
+  "cash_payment": "دفع نقدي",
+  "you_chose_cash": "لقد اخترت الدفع نقداً.",
+  "confirm": "تأكيد",
+  "cancel": "إلغاء",
+  "order_success": "تم إرسال الطلب",
+  "order_placed_message": "تم إرسال طلبك بنجاح. شكراً لتسوقك معنا!",
+  "will_charge": "سيتم خصم"
 }
 
 
-}
+
+
+
+
 
 
 

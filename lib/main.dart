@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:app/welcome/welcome_page1.dart';
 import 'package:app/welcome/welcome_page.dart';
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();

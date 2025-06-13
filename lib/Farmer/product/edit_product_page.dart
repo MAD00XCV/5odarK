@@ -4,7 +4,9 @@ import 'package:image_picker/image_picker.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class FarmerEditProductPage extends StatefulWidget {
-  const FarmerEditProductPage({super.key, required Map<String, dynamic> product});
+  final Map<String, dynamic> product;
+
+  const FarmerEditProductPage({super.key, required this.product});
 
   @override
   State<FarmerEditProductPage> createState() => _FarmerEditProductPageState();
@@ -22,11 +24,9 @@ class _FarmerEditProductPageState extends State<FarmerEditProductPage> {
   String? _imageUrl;
 
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    final Map<String, dynamic> product =
-        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-
+  void initState() {
+    super.initState();
+    final product = widget.product;
     _nameController = TextEditingController(text: product['name']);
     _descriptionController = TextEditingController(text: product['description']);
     _priceController = TextEditingController(text: product['price']);
@@ -44,6 +44,16 @@ class _FarmerEditProductPageState extends State<FarmerEditProductPage> {
     }
   }
 
+  void _saveProduct() {
+    if (_formKey.currentState!.validate()) {
+      // عملية حفظ المنتج المعدل
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Farmer_J.product_updated_success'.tr())),
+      );
+      Navigator.pop(context);
+    }
+  }
+
   @override
   void dispose() {
     _nameController.dispose();
@@ -54,105 +64,108 @@ class _FarmerEditProductPageState extends State<FarmerEditProductPage> {
     super.dispose();
   }
 
-  void _saveProduct() {
-    if (_formKey.currentState!.validate()) {
-      // هنا ممكن تبعت الداتا للسيرفر أو تحدث القائمة
-      Navigator.pop(context);
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFEEF2E3),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF74B625),
-        foregroundColor: Colors.white,
         title: Text(
           'Farmer_J.edit_product'.tr(),
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
         ),
+        backgroundColor: const Color(0xFF74B625),
+        foregroundColor: Colors.white,
         centerTitle: true,
+        elevation: 0,
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Stack(
-                alignment: Alignment.topRight,
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(16),
-                    child: _image != null
-                        ? Image.file(_image!, height: 200, width: double.infinity, fit: BoxFit.cover)
-                        : Image.network(_imageUrl!, height: 200, width: double.infinity, fit: BoxFit.cover),
-                  ),
-                  Positioned(
-                    top: 8,
-                    right: 8,
-                    child: GestureDetector(
-                      onTap: _pickImage,
-                      child: Container(
-                        padding: const EdgeInsets.all(6),
-                        decoration: BoxDecoration(
-                          color: Colors.black45,
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        child: const Icon(Icons.camera_alt, color: Colors.white, size: 20),
-                      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(20),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: [
+                GestureDetector(
+                  onTap: _pickImage,
+                  child: Container(
+                    height: 150,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFD3EB92),
+                      borderRadius: BorderRadius.circular(12),
                     ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20),
-              _buildTextField(_nameController, 'Farmer_J.product_name'.tr()),
-              const SizedBox(height: 12),
-              _buildTextField(_descriptionController, 'Farmer_J.product_description'.tr(), maxLines: 3),
-              const SizedBox(height: 12),
-              _buildTextField(_priceController, 'Farmer_J.product_price'.tr(), keyboardType: TextInputType.number),
-              const SizedBox(height: 12),
-              _buildTextField(_unitController, 'Farmer_J.product_unit'.tr()),
-              const SizedBox(height: 12),
-              _buildTextField(_addressController, 'Farmer_J.product_address'.tr()),
-              const SizedBox(height: 24),
-              ElevatedButton(
-                onPressed: _saveProduct,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF74B625),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 14),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    child: _image != null
+                        ? ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.file(_image!, fit: BoxFit.cover),
+                          )
+                        : _imageUrl != null
+                            ? ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.network(_imageUrl!, fit: BoxFit.cover),
+                              )
+                            : Center(
+                                child: Text(
+                                  'Farmer_J.choose_image'.tr(),
+                                  style: const TextStyle(color: Color(0xFF242422)),
+                                ),
+                              ),
                   ),
                 ),
-                child: Text('Farmer_J.save'.tr(), style: const TextStyle(fontSize: 16)),
-              )
-            ],
+
+                const SizedBox(height: 20),
+
+                _buildField(_nameController, 'Farmer_J.product_name'),
+                _buildField(_descriptionController, 'Farmer_J.product_description'),
+                _buildField(_addressController, 'Farmer_J.product_address'),
+                _buildField(_priceController, 'Farmer_J.product_price', keyboardType: TextInputType.number),
+                _buildField(_unitController, 'Farmer_J.product_unit'),
+
+                const SizedBox(height: 10),
+
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: _saveProduct,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF74B625),
+                      padding: const EdgeInsets.symmetric(vertical: 15),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: Text(
+                      'Farmer_J.save'.tr(),
+                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 
-  Widget _buildTextField(TextEditingController controller, String label,
-      {int maxLines = 1, TextInputType keyboardType = TextInputType.text}) {
-    return TextFormField(
-      controller: controller,
-      maxLines: maxLines,
-      keyboardType: keyboardType,
-      validator: (value) => value == null || value.isEmpty ? 'validation.required'.tr() : null,
-      decoration: InputDecoration(
-        labelText: label,
-        filled: true,
-        fillColor: Colors.white,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none,
+  Widget _buildField(TextEditingController controller, String labelKey,
+      {TextInputType keyboardType = TextInputType.text}) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: TextFormField(
+        controller: controller,
+        keyboardType: keyboardType,
+        validator: (value) =>
+            value == null || value.isEmpty ? 'Farmer_J.required_field'.tr() : null,
+        decoration: InputDecoration(
+          hintText: labelKey.tr(),
+          filled: true,
+          fillColor: const Color(0xFFD3EB92),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide.none,
+          ),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       ),
     );
   }

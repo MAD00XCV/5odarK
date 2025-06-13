@@ -1,8 +1,8 @@
+import 'package:app/card/cart_page.dart';
 import 'package:app/home/explore_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:app/profile/favourite_page.dart';
-import 'package:app/cart_page.dart';
 import 'package:app/profile/profile_page.dart';
 import 'package:app/widgets/app_bar.dart';
 import 'package:easy_localization/easy_localization.dart';

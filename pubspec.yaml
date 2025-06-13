@@ -21,6 +21,12 @@ dependencies:
   badges: ^3.1.2
   dio: ^5.4.0
   image_picker: ^1.0.4 
+  google_maps_flutter: ^2.6.0  
+  location: ^5.0.3
+  flutter_credit_card: ^4.0.1
+  geocoding: ^2.1.0
+
+
 
 dev_dependencies:
   flutter_test:
@@ -29,7 +35,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
   assets:
     - assets/images/con1.png
     - assets/images/straw.jpg
@@ -53,5 +58,8 @@ flutter:
     - assets/images/vegetables.jpg
     - assets/images/milk&eeg.jpg
     - assets/images/beverages.jpg
+    - assets/images/onion.png
     - assets/translations/ar.json
     - assets/translations/en.json
+
+

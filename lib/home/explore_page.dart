@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
+// import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:app/product/products.dart';
 import 'package:app/widgets/product_card.dart';
 import 'package:app/product/category_page.dart';
@@ -97,13 +97,13 @@ class ExplorePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 12),
-                        child: IconButton.filled(
-                          onPressed: () {},
-                          icon: const Icon(IconlyLight.filter),
-                        ),
-                      )
+                      // Padding(
+                      //   padding: const EdgeInsets.only(left: 12),
+                      //   child: IconButton.filled(
+                      //     onPressed: () {},
+                      //     icon: const Icon(IconlyLight.filter),
+                      //   ),
+                      // )
                     ],
                   ),
                 ),

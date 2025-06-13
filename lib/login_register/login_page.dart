@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
   void _login() {
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const FarmerMainPage()),
+      MaterialPageRoute(builder: (context) => const HomePage()),
     );
   }
 

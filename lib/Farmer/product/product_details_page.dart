@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class ProductDetailsPage extends StatelessWidget {
-  const ProductDetailsPage({super.key, required Map<String, dynamic> product});
+  final Map<String, dynamic> product;
+
+  const ProductDetailsPage({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
-    final Map<String, dynamic> product =
-        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-
     return Scaffold(
       backgroundColor: const Color(0xFFEEF2E3),
       appBar: AppBar(

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WelcomePage1 extends StatefulWidget {
   const WelcomePage1({super.key});
@@ -12,7 +13,6 @@ class WelcomePage1 extends StatefulWidget {
 class _WelcomePage1State extends State<WelcomePage1>
     with TickerProviderStateMixin {
   final List<String> fruitImages = [
-    'assets/images/con1.png',
     'assets/images/straw.jpg',
     'assets/images/potato.jpg',
     'assets/images/orange.jpg',
@@ -21,13 +21,7 @@ class _WelcomePage1State extends State<WelcomePage1>
     'assets/images/lemon.jpg',
     'assets/images/carrot.jpg',
     'assets/images/tomato.jpg',
-    'assets/images/connnn.png',
-    'assets/images/women.png',
-    'assets/images/farmland.jpg',
-    'assets/images/tablet.jpg',
-    'assets/images/9008.jpg',
-    'assets/images/79998.jpg',
-    'assets/images/ok.jpg',
+    'assets/images/onion.png',
   ];
 
   final List<_FruitWidget> activeFruits = [];
@@ -133,7 +127,7 @@ class _WelcomePage1State extends State<WelcomePage1>
               animation: _glowAnimation,
               builder: (context, child) => Text(
                 '5odarK',
-                style: TextStyle(
+                style: GoogleFonts.dancingScript(
                   fontSize: 45,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
